@@ -1,10 +1,12 @@
+# config/routes.rb
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
-
-  # Defines the root path route ("/")
-  # root "posts#index"
+  # Generic syntax:
+  # verb "path", to: "controller#action"
+  root "pages#ask"
+  get "ask", to: "pages#ask"
+  get "answer", to: "pages#answer"
 end
+
+# TODO: 1. Create route in routes.rb
+# TODO: 2. Create Controller and/or actions in controller
+# TODO: 3. Create the corresponding view (HTML files in folder w/ same name as controller)
